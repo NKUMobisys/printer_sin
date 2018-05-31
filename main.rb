@@ -21,7 +21,7 @@ post '/print' do
             opt += " -P \"#{page}\" "
         end
         if double_sides = opts["double_sides"]
-          opt += "-o sides=two-sided-long-edge"
+          opt += " -o sides=two-sided-long-edge"
         end
         "lp #{opt} '#{file}'"
     end
